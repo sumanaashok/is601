@@ -1,3 +1,14 @@
 body {
     font-family: Helvetica, "Helvetica Neue", sans-serif;
 }
+
+.red{
+    color:red;
+}
+.makeBigger{
+    font-size: 120%;
+}
+
+.CenturyGothic{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
