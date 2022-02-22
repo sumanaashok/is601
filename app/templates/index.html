@@ -3,57 +3,121 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
 
         <title>This is {{ name }} Website</title>
     {% endblock %}
 
 </head>
 <body>
-<div id="main_menu" class="red makeBigger">
-    <h1><span class="CenturyGothic">S</span>umana's Homepage</h1>
+<div class="container">
+
+    <div class="row">
+
+        <header class="mb-5">
+            <!-- As a link -->
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Sumana's Webpage</a>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="row border border-primary mb-5">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-<div id="main_content">
-    <p>
-        <span class="makeBigger CenturyGothic">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque, ex sed viverra aliquet, tortor lectus
-    vestibulum neque, in tincidunt urna felis ac felis. Phasellus tempus sodales sem, in finibus sapien semper sed.
-    Mauris iaculis vitae orci quis blandit. Praesent nisi lorem, viverra ut odio at, efficitur accumsan velit.
-    Pellentesque sapien risus, suscipit at augue id, tempus sollicitudin sapien. Maecenas vitae massa ultricies,
-    eleifend velit sed, sollicitudin purus. Duis a sapien sed ipsum semper facilisis eget non orci. Sed vitae placerat
-    orci. Quisque dapibus gravida quam. Etiam at neque sed massa porta gravida. Cras ultrices id sem sed tincidunt.
-    Fusce porta leo non urna feugiat lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada
-    fames ac turpis egestas. Quisque vitae neque ut sem luctus cursus pulvinar nec magna.
-    </p>
-    <p>
-    Nulla vel rhoncus tortor, eu cursus risus. Nam elementum, mauris commodo volutpat efficitur, metus odio pellentesque
-    magna, sit amet accumsan augue mi at velit. Morbi ac interdum mi, nec venenatis lectus. Nam eget nulla accumsan
-    metus commodo sagittis. Donec et lectus lorem. Nulla sapien elit, bibendum quis tincidunt quis, tempor ac arcu. Ut
-    facilisis varius aliquam. Pellentesque egestas sem nisi.
-    </p>
-    <p>
-    Vestibulum sed turpis interdum, viverra purus in, cursus diam. Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia curae; Maecenas at sem fermentum, semper augue sed, vulputate sem. Donec hendrerit at
-    dui ut porttitor. Praesent consectetur ultrices nibh, et auctor metus egestas vitae. Mauris tortor mauris, gravida
-    ut ultricies a, fringilla vel ligula. Proin ornare, ipsum ut semper facilisis, eros dui tristique ligula, in
-    lobortis sem sem vitae ante.
-    </p>
-    <p>
-    Etiam lobortis at ligula vitae iaculis. Sed condimentum ultrices maximus. Quisque mi enim, sodales vestibulum nisl
-    a, dictum blandit mi. Nulla velit massa, viverra et tempus vel, viverra fringilla sapien. Donec tincidunt faucibus
-    felis pulvinar porttitor. Mauris accumsan euismod augue, vitae ultrices magna congue eu. Suspendisse gravida metus
-    vitae mattis euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-    Maecenas dictum, turpis quis finibus consectetur, augue odio bibendum lectus, ac dapibus mi lacus accumsan diam.
-    Pellentesque sollicitudin turpis eget diam fermentum, nec luctus augue gravida.
-    </p>
-    <p>
-    Pellentesque sed euismod eros. Vivamus lobortis nulla sed sodales porttitor. Donec vitae augue nunc. Praesent at
-    velit quam. Cras tristique eget elit sit amet bibendum. Donec aliquam sem ligula, a vestibulum tortor malesuada a.
-    Aenean et malesuada libero, et vestibulum est. Curabitur quis ante pulvinar, porttitor nisi ut, tempus ligula. Ut
-    ornare turpis sed sem rhoncus maximus. Aliquam tempus, neque vitae semper tristique, nibh nulla placerat elit, id
-    accumsan ante lectus eu nisi. Sed sed tristique sem, vitae ullamcorper tortor.
-    </p>
-</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>
